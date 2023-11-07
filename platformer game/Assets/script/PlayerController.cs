@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     //Ground check Variables
     public LayerMask groundLayer;
+    public Transform groundCheck;
+    public bool isGrounded;
     
 
     public static PlayerController instance; //creating an object of the class to be findable
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics.2DOverlapCircle(groundCheck.transform, .5f, groundLayer);
         Vector3 newPosition = transform.position;
         Vector3 newScale = transform.localScale;
         float currentScale = Mathf.Abs(transform.localScale.x);
