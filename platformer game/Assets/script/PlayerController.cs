@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.2DOverlapCircle(groundCheck.transform, .5f, groundLayer);
+        isGrounded = Physics.2DOverlapCircle(groundCheck.transform, .5f, groundLayer)
         Vector3 newPosition = transform.position;
         Vector3 newScale = transform.localScale;
         float currentScale = Mathf.Abs(transform.localScale.x);
