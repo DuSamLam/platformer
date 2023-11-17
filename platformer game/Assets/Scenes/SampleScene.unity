@@ -626,7 +626,7 @@ Transform:
   - {fileID: 504951029}
   - {fileID: 1992120563}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &161921216
 BoxCollider2D:
@@ -2062,7 +2062,7 @@ Transform:
   - {fileID: 1120561698}
   - {fileID: 1007759899}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596246133
 GameObject:
@@ -2909,6 +2909,63 @@ Transform:
   m_Father: {fileID: 585483011}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1200024612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 86.014244
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9287634
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
+      propertyPath: m_Name
+      value: Gift_02 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c2a21ad96a57a342b9245d452f89255, type: 3}
 --- !u!1 &1210000959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,7 +3073,7 @@ Transform:
   m_LocalScale: {x: 6.666083, y: 5.7475, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.501}
 --- !u!1 &1256432936
 GameObject:
@@ -4468,7 +4525,7 @@ Transform:
   - {fileID: 1748118300}
   - {fileID: 129835952}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1771253515
 CapsuleCollider2D:
@@ -4702,7 +4759,7 @@ Transform:
   m_LocalScale: {x: 6.477649, y: 0.41489, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.771}
 --- !u!1 &1992120562
 GameObject:
@@ -4903,7 +4960,7 @@ Transform:
   - {fileID: 1354963769}
   - {fileID: 596246136}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2014053599
 BoxCollider2D:
