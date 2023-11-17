@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //Animation variable 
-    Animator anim;
-    public bool moving = false;
+   
 
     //Movement Variables
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
@@ -26,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -42,7 +40,7 @@ public class PlayerController : MonoBehaviour
         {
             newPosition.x -= speed;
             newScale.x = -currentScale;
-            moving = true;
+            
         }
 
         if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
@@ -58,10 +56,10 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyUp("a") || Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
-            moving = false;
+            
         }
 
-        anim.SetBool("isMoving", moving);
+       
         transform.position = newPosition;
         transform.localScale = newScale;
     }
