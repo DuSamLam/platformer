@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
-   
 
+    
+    
+        
+   
     //Movement Variables
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
     public float jumpForce; //the force that will be added to the vertical component of player's velocity
@@ -20,12 +23,21 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer sprite;
 
     // Start is called before the first frame update
+    public static PlayerController instance;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        
-    }
+
+        if (instance != null)
+       {
+          Destroy(gameObject);
+          return;
+       }
+          instance = this;
+          GameObject.DontDestroyOnLoad(gameObject);
+
+}
 
     // Update is called once per frame
     void Update()
@@ -68,8 +80,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("exit"))
         {
             Debug.Log("hit");
+            SceneManager.LoadScene(3); //access SceneManager class for LoadScene function
+        }
+
+        if (collision.gameObject.tag.Equals("exit 2"))
+        {
+            Debug.Log("hit");
             SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
         }
     }
+
 
 }
