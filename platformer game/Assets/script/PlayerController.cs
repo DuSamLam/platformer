@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
 
 
     public Vector2 originalPosition;
-        
-   
+
+
     //Movement Variables
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
     public float jumpForce; //the force that will be added to the vertical component of player's velocity
@@ -31,14 +31,14 @@ public class PlayerController : MonoBehaviour
         originalPosition = transform.position;
 
         if (instance != null)
-       {
-          Destroy(gameObject);
-          return;
-       }
-          instance = this;
-          GameObject.DontDestroyOnLoad(gameObject);
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        GameObject.DontDestroyOnLoad(gameObject);
 
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             newPosition.x -= speed;
             newScale.x = -currentScale;
-            
+
         }
 
         if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
@@ -67,12 +67,12 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
-        if(Input.GetKeyUp("a") || Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp("a") || Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
-            
+
         }
 
-       
+
         transform.position = newPosition;
         transform.localScale = newScale;
     }
@@ -96,7 +96,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log(originalPosition);
             transform.position = originalPosition;
         }
+
+        if (collision.gameObject.tag.Equals("Respawn"))
+        {
+            Debug.Log("back to the start");
+            Debug.Log(originalPosition);
+            transform.position = originalPosition;
+        }
+
     }
-
-
 }
