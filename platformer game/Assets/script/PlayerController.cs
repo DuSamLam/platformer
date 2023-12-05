@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    
-    
+
+    public Vector2 originalPosition;
         
    
     //Movement Variables
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        originalPosition = transform.position;
 
         if (instance != null)
        {
@@ -87,6 +88,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("hit");
             SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+        }
+
+        if (collision.gameObject.tag.Equals("respawn"))
+        {
+            Debug.Log("back to the start");
+            Debug.Log(originalPosition);
+            transform.position = originalPosition;
         }
     }
 
