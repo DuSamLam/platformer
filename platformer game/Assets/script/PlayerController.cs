@@ -87,9 +87,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("exit 2"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(2);
-            Debug.Log(originalPosition);
-            transform.position = originalPosition; //access SceneManager class for LoadScene function
+            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
         }
 
         if (collision.gameObject.tag.Equals("respawn"))
